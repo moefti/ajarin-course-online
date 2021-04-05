@@ -3,7 +3,7 @@ import React from "react";
 
 export default function Layout(props) {
   return (
-    <div className="mx-auto">
+    <div className="overflow-hidden">
       <Head>
         <title>{props.title}</title>
         <meta charset="utf-8" />

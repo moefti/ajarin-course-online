@@ -31,7 +31,7 @@ export default function Menu(props) {
         </ul>
       </div>
       <div
-        className={`transition duration-300 absolute backdrop bg-black w-full h-full top-0 left-0 opacity-20 z-40 ${
+        className={`transition duration-300 fixed backdrop bg-black w-full h-full top-0 left-0 opacity-20 z-40 ${
           props.transition ? "" : "hidden"
         }`}
         onClick={props.close}
