@@ -24,7 +24,7 @@ export default function Layout(props) {
           rel="stylesheet"
         /> */}
       </Head>
-      <div className="mx-auto w-11/12 container-content">{props.children}</div>
+      <div>{props.children}</div>
     </div>
   );
 }

@@ -15,6 +15,7 @@ module.exports = {
         third: {
           DEFAULT: "#FFD49F",
           dark: "#9C7340",
+          light: "#FBFBFB",
         },
       },
       backgroundImage: (theme) => ({
