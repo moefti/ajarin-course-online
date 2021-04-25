@@ -44,7 +44,7 @@ function ImageBanner() {
         className="hidden lg:block absolute top-24 -left-24 transform -rotate-6"
       >
         <Image
-          src="/Group331.png"
+          src="/kelas.png"
           width={229}
           height={136}
           data-speed="4"
@@ -55,13 +55,13 @@ function ImageBanner() {
         ref={image2}
         className="hidden lg:block absolute top-32  transform -rotate-6 -right-24"
       >
-        <Image src="/Group322.png" width={229} height={136} data-speed="4" />
+        <Image src="/diskusi.png" width={229} height={136} data-speed="4" />
       </div>
       <div
         ref={image3}
         className="hidden lg:block absolute -bottom-16 transform left-28"
       >
-        <Image src="/Group333.png" width={229} height={136} data-speed="4" />
+        <Image src="/pengguna.png" width={229} height={136} data-speed="4" />
       </div>
     </div>
   );

@@ -17,7 +17,7 @@ export default function CarouselComp() {
     <Fragment>
       <Slider {...settings}>
         <div>
-          <h3 className="font-medium">
+          <h3 className="font-medium text-base lg:text-lg">
             Kelas yang sangat bermanfaat, mudah di pahami dan yang paling
             penting biayanya sangat hemat di kantong.
           </h3>
@@ -25,7 +25,7 @@ export default function CarouselComp() {
           <Image src="/user-testi.png" width={50} height={50} />
         </div>
         <div>
-          <h3 className="font-medium">
+          <h3 className="font-medium text-base lg:text-lg">
             Kelas yang sangat bermanfaat, mudah di pahami dan yang paling
             penting biayanya sangat hemat di kantong.
           </h3>

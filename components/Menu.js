@@ -1,5 +1,5 @@
 import React from "react";
-import Image from "next/image";
+import CloseSvg from "../public/icons/Close.svg";
 
 export default function Menu(props) {
   return (
@@ -13,7 +13,7 @@ export default function Menu(props) {
           className="absolute top-9 right-8 cursor-pointer"
           onClick={props.close}
         >
-          <Image src="/Close.svg" width={32} height={32} />
+          <CloseSvg />
         </div>
         <ul className="cursor-pointer text-darkPurple-dark text-center space-y-24">
           <li className="py-2 border rounded border-transparent hover:border-gray-600 px-3 hover:border-opacity-100 cursor-pointer">

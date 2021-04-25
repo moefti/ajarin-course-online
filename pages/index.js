@@ -26,7 +26,6 @@ export default function Home() {
     <Layout>
       <Head>
         <title>Ajarin - Course Online</title>
-        <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={`font-Poppins`}>
         <Wrapper addClass="">
@@ -95,7 +94,9 @@ export default function Home() {
                   {/* item 1 */}
                   <li className="flex space-x-4 font-medium">
                     {/* <img src="/arrow.svg" alt="arrow" /> */}
-                    <ArrowSvg />
+                    <div>
+                      <ArrowSvg />
+                    </div>
                     <span>50+ Kelas unggulan dengan Mentor Berpengalaman</span>
                   </li>
                   <p className="ml-10 font-light text-sm text-primary-dark">
@@ -104,7 +105,9 @@ export default function Home() {
                   </p>
                   {/* item 2 */}
                   <li className="flex space-x-4 font-medium mt-8">
-                    {/* <img src="/arrow.svg" alt="arrow" /> */}
+                    <div>
+                      <ArrowSvg />
+                    </div>
                     <span>Belajar Dimana Saja dan Kapan Saja</span>
                   </li>
                   <p className="ml-10 font-light text-sm text-primary-dark">
@@ -113,7 +116,9 @@ export default function Home() {
                   </p>
                   {/* item 3 */}
                   <li className="flex space-x-4 font-medium mt-8">
-                    {/* <img src="/arrow.svg" alt="arrow" /> */}
+                    <div>
+                      <ArrowSvg />
+                    </div>
                     <span>20+ Mentor dan Asistennya Siap Membantu kamu</span>
                   </li>
                   <p className="ml-10 font-light text-sm text-primary-dark">
@@ -133,13 +138,13 @@ export default function Home() {
             </h2>
             <div className="flex flex-col items-center justify-between md:flex-row flex-wrap">
               <Card
-                image="cardImage"
+                image="programming"
                 tag="Pemograman"
                 title="Belajar pemogramam PHP dasar"
                 user="Mang Dadang"
               />
               <Card
-                image="math"
+                image="matematika"
                 tag="Matematika"
                 title="Belajar pemogramam PHP dasar"
                 user="Mang Dadang"
@@ -157,7 +162,7 @@ export default function Home() {
         <section className="pt-32 pb-20 lg:pb-64 text-primary relative">
           <Wrapper>
             <div className="absolute">
-              <Image src="/bg-testimoni.png" width={1125} height={636} />
+              <Image src="/testi-bg.png" width={1125} height={636} />
             </div>
             <div className="relative w-full h-full z-20">
               <div className=" top-20">

@@ -7,6 +7,7 @@ export default function Layout(props) {
       <Head>
         <title>{props.title}</title>
         <meta charset="utf-8" />
+        <link rel="icon" href="data:;base64,iVBORwOKGO=" />
         <link
           rel="apple-touch-icon"
           sizes="120x120"

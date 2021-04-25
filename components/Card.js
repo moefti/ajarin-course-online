@@ -1,6 +1,6 @@
 import Image from "next/image";
-import Star from "../public/star.svg";
-import Modul from "../public/modul.svg";
+import Star from "../public/icons/star.svg";
+import Modul from "../public/icons/modul.svg";
 
 export default function Card(props) {
   return (
