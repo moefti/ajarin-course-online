@@ -2,7 +2,6 @@ import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 
 function ImageBanner() {
-  const [move, setMove] = useState();
   const wrapper = useRef(null);
   const image1 = useRef(null);
   const image2 = useRef(null);
