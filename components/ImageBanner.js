@@ -33,7 +33,6 @@ function ImageBanner() {
     wrapper.current.removeEventListener("mousemove", mouseMove);
   };
 
-  console.log(wrapper.current);
   return (
     <div
       ref={wrapper}

@@ -2,10 +2,11 @@ import Head from "next/head";
 import { useState } from "react";
 import Layout from "../components/Layout";
 import Menu from "../components/Menu";
-import Navbar from "../components/Navbar";
+import Navbar from "../layout/Navbar";
 import Image from "next/image";
 import ImageBanner from "../components/ImageBanner";
 import Wrapper from "../layout/Wrapper";
+import ArrowSvg from "../public/icons/arrow.svg";
 import Card from "../components/Card";
 import CarouselComp from "../components/CarouselComp";
 import Footer from "../layout/Footer";
@@ -28,9 +29,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={`font-Poppins`}>
-        <Wrapper>
-          {/* ${openMenu ? "fixed left-0 pl-5 " : ""}  */}
-          {/* background */}
+        <Wrapper addClass="">
           <div className="bg-hero w-full ">
             <Image src="/bg-hero.png" layout="fill" />
           </div>
@@ -95,7 +94,8 @@ export default function Home() {
                 <ul className="list-outside mt-4 list-none ">
                   {/* item 1 */}
                   <li className="flex space-x-4 font-medium">
-                    <img src="/arrow.svg" alt="arrow" />
+                    {/* <img src="/arrow.svg" alt="arrow" /> */}
+                    <ArrowSvg />
                     <span>50+ Kelas unggulan dengan Mentor Berpengalaman</span>
                   </li>
                   <p className="ml-10 font-light text-sm text-primary-dark">
@@ -104,7 +104,7 @@ export default function Home() {
                   </p>
                   {/* item 2 */}
                   <li className="flex space-x-4 font-medium mt-8">
-                    <img src="/arrow.svg" alt="arrow" />
+                    {/* <img src="/arrow.svg" alt="arrow" /> */}
                     <span>Belajar Dimana Saja dan Kapan Saja</span>
                   </li>
                   <p className="ml-10 font-light text-sm text-primary-dark">
@@ -113,7 +113,7 @@ export default function Home() {
                   </p>
                   {/* item 3 */}
                   <li className="flex space-x-4 font-medium mt-8">
-                    <img src="/arrow.svg" alt="arrow" />
+                    {/* <img src="/arrow.svg" alt="arrow" /> */}
                     <span>20+ Mentor dan Asistennya Siap Membantu kamu</span>
                   </li>
                   <p className="ml-10 font-light text-sm text-primary-dark">
