@@ -7,6 +7,8 @@ import Image from "next/image";
 import ImageBanner from "../components/ImageBanner";
 import Wrapper from "../layout/Wrapper";
 import Card from "../components/Card";
+import CarouselComp from "../components/CarouselComp";
+import Footer from "../layout/Footer";
 
 export default function Home() {
   const [openMenu, setOpenMenu] = useState(false);
@@ -71,7 +73,7 @@ export default function Home() {
             </div>
           </section>
           {/* section benefit */}
-          <section className="mt-44 text-primary mb-64">
+          <section className="mt-44 text-primary mb-20 lg:mb-64">
             <h2 className="text-2xl lg:text-4xl text-center font-bold font-Lato">
               Cari Tau Kenapa Kamu Harus Ambil Kelas Disini
             </h2>
@@ -124,7 +126,7 @@ export default function Home() {
           </section>
           {/* section Kelas */}
         </Wrapper>
-        <section className="py-16 bg-third-light text-primary">
+        <section className="pt-16 pb-32 bg-third-light text-primary">
           <Wrapper>
             <h2 className="text-2xl lg:text-4xl font-bold font-Lato mb-10 lg:mb-20">
               Kelas Populer
@@ -151,7 +153,39 @@ export default function Home() {
             </div>
           </Wrapper>
         </section>
+        {/* section testimoni */}
+        <section className="pt-32 pb-20 lg:pb-64 text-primary relative">
+          <Wrapper>
+            <div className="absolute">
+              <Image src="/bg-testimoni.png" width={1125} height={636} />
+            </div>
+            <div className="relative w-full h-full z-20">
+              <div className=" top-20">
+                <h1 className="text-4xl font-Lato font-bold  mb-20 md:md-40">
+                  Mari Lihat apa yang dikatakan
+                  <br /> siswa kami
+                </h1>
+                <div className="px-16 py-24 bg-green-50 w-full rounded-md text-center text-xl space-y-8 font-lato max-w-3xl">
+                  <CarouselComp />
+                </div>
+              </div>
+            </div>
+          </Wrapper>
+        </section>
+        {/* section ads */}
+        <section className="bg-green-100 py-12 ">
+          <Wrapper addClass="flex flex-col md:flex-row justify-between text-center md:text-left space-y-10 md:space-y-0 items-center">
+            <h2 className="text-2xl md:text-3xl font-Lato font-bold">
+              Mari Bergabung bersama kami <br />
+              untuk meningkatkan Kemampuanmu
+            </h2>
+            <button className="bg-black text-white py-2 px-3 md:py-3 md:px-4 rounded-md">
+              Bergabung Sekarang
+            </button>
+          </Wrapper>
+        </section>
       </main>
+      <Footer />
     </Layout>
   );
 }
