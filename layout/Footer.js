@@ -1,5 +1,5 @@
 import Wrapper from "./Wrapper";
-import Logo from "../public/logo.svg";
+import Logo from "../public/icons/logo.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"; // Import the FontAwesomeIcon component
 import {
   faFacebookF,

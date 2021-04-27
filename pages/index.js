@@ -1,40 +1,19 @@
-import Head from "next/head";
-import { useState } from "react";
 import Layout from "../components/Layout";
-import Menu from "../components/Menu";
-import Navbar from "../layout/Navbar";
 import Image from "next/image";
 import ImageBanner from "../components/ImageBanner";
 import Wrapper from "../layout/Wrapper";
 import ArrowSvg from "../public/icons/arrow.svg";
 import Card from "../components/Card";
 import CarouselComp from "../components/CarouselComp";
-import Footer from "../layout/Footer";
 
 export default function Home() {
-  const [openMenu, setOpenMenu] = useState(false);
-
-  const handleMenu = () => {
-    setOpenMenu(true);
-  };
-
-  const handleClose = () => {
-    setOpenMenu(false);
-  };
-
   return (
-    <Layout>
-      <Head>
-        <title>Ajarin - Course Online</title>
-      </Head>
-      <main className={`font-Poppins`}>
+    <Layout title={'Ajarin - Course Online'}>
+      <main>
         <Wrapper addClass="">
           <div className="bg-hero w-full ">
             <Image src="/bg-hero.png" layout="fill" />
           </div>
-          {/* navbar menu mobile */}
-          <Navbar open={handleMenu} />
-          <Menu close={handleClose} transition={openMenu} />
           {/* section hero */}
           <section className="relative my-12 md:grid md:gap-36 md:grid-cols-2 lg:grid-cols-3 lg:gap-0 grid-flow-row">
             <div className="flex flex-col justify-center content-center">
@@ -161,10 +140,10 @@ export default function Home() {
         {/* section testimoni */}
         <section className="pt-32 pb-20 lg:pb-64 text-primary relative">
           <Wrapper>
-            <div className="absolute">
+            <div className="absolute z-auto">
               <Image src="/testi-bg.png" width={1125} height={636} />
             </div>
-            <div className="relative w-full h-full z-20">
+            <div className="relative w-full h-full">
               <div className=" top-20">
                 <h1 className="text-4xl font-Lato font-bold  mb-20 md:md-40">
                   Mari Lihat apa yang dikatakan
@@ -190,7 +169,6 @@ export default function Home() {
           </Wrapper>
         </section>
       </main>
-      <Footer />
     </Layout>
   );
 }

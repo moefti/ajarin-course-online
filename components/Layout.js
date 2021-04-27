@@ -1,9 +1,43 @@
 import Head from "next/head";
-import React from "react";
+import React, {useEffect, useRef, useState} from "react";
+import Navbar from "../layout/Navbar";
+import Menu from './Menu'
+import Footer from "../layout/Footer";
 
 export default function Layout(props) {
+  const [openMenu, setOpenMenu] = useState(false);
+  const [scroll, setScroll] = useState(false);
+
+  useEffect(() => {
+    window.addEventListener("scroll", function () {
+      if (window.scrollY >= 10) {
+        setScroll(true);
+      } else {
+        setScroll(false);
+      }
+    });
+
+    return () => {
+      window.removeEventListener("scroll", function () {
+        if (window.scrollY >= 10) {
+          setScroll(true);
+        } else {
+          setScroll(false);
+        }
+      });
+    };
+  }, [setScroll]);
+
+  const handleMenu = () => {
+    setOpenMenu(true);
+  };
+
+  const handleClose = () => {
+    setOpenMenu(false);
+  };
+  
   return (
-    <div className="overflow-hidden">
+    <div className={`md:overflow-hidden font-Poppins ${openMenu ? 'overflow-y-hidden h-screen' : ''}`}>
       <Head>
         <title>{props.title}</title>
         <meta charset="utf-8" />
@@ -39,7 +73,13 @@ export default function Layout(props) {
         />
         <meta name="theme-color" content="#ffffff" />
       </Head>
-      <div>{props.children}</div>
+      <div className='pb-8'>
+        <Navbar open={handleMenu} bg={scroll} />
+
+      </div>
+        <Menu close={handleClose} transition={openMenu} />
+      {props.children}
+      <Footer/>
     </div>
   );
 }
